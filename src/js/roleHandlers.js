@@ -30,3 +30,15 @@ const addSurnameToTable = (surname, className, index) => {
   const elements = document.querySelectorAll(className);
   elements[index].textContent = surname;
 };
+
+// Функция очищает ячейки с фамилиями в обеих таблицах и сбрасывает счетчики
+export const cleanRoleCells = () => {
+  const cellsDuty = document.querySelectorAll('.schedule__cell_duty');
+  const cellsAssistant = document.querySelectorAll('.schedule__cell_assistant');
+
+  countAssistant = 0;
+  countDuty = 0;
+
+  cellsDuty.forEach((cell) => (cell.textContent = ''));
+  cellsAssistant.forEach((cell) => (cell.textContent = ''));
+};
