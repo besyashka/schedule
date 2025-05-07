@@ -15,7 +15,7 @@ export const clickHandlerCell = () => {
   const cells = document.querySelectorAll('.cell');
 
   cells.forEach((cell, index) => {
-    cell.addEventListener('click', (e) => {
+    cell.addEventListener('click', () => {
       if (!cell.classList.contains('marked')) {
         addCross(cells, cell, index);
       } else {
