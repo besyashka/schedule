@@ -1,12 +1,14 @@
 import { getMonthAndYear } from './calculations.js';
 import { addCross, removeCross } from './crossHandlers.js';
-import { getSurname } from './roleHandlers.js';
+import { getSurname, cleanRoleCells } from './roleHandlers.js';
 
 // Функция обработки событий для кнопки генерации
 export const clickHandlerButtonGenerate = () => {
   const buttonGenerate = document.querySelector('.button__generate');
   buttonGenerate.addEventListener('click', () => {
     getMonthAndYear();
+    clickHandlerCell();
+    cleanRoleCells();
   });
 };
 
