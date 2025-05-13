@@ -16,10 +16,10 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-            loader: 'babel-loader',
-            options: {
-                presets: [],
-            },
+          loader: 'babel-loader',
+          options: {
+            presets: [],
+          },
         },
       },
       {
@@ -35,7 +35,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(), // очищает папку dist перед сборкой
     new HtmlWebpackPlugin({
-        template: './src/index.html', // ваш HTML-шаблон
+      template: './src/index.html', // ваш HTML-шаблон
     }),
-],
+  ],
 };
